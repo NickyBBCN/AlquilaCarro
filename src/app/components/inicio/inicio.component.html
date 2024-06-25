@@ -1,0 +1,24 @@
+
+<div class="card">
+  <p-table [value]="clientes" [tableStyle]="{ 'min-width': '50rem' }">
+      <ng-template pTemplate="header">
+          <tr>
+              <th>Fecha</th>
+              <th>Identificacion</th>
+              <th>Nombre Completo</th>
+              <th>Apellido Completo</th>
+
+          </tr>
+      </ng-template>
+      <ng-template pTemplate="body" let-cliente>
+          <tr>
+              <td>{{ cliente.nombre }}</td>
+              <td>{{ cliente.identificacion }}</td>
+              <td>{{ cliente.nombreCompleto }}</td>
+              <td>{{ cliente.apellidoCompleto }}</td>
+
+          </tr>
+      </ng-template>
+  </p-table>
+</div>
+<!-- <p-button label="Submit" (onClick)="nuevo()">Nuevo Registro</p-button>  -->
