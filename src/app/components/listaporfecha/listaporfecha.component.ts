@@ -18,12 +18,12 @@ export class ListaporfechaComponent {
   constructor(private consultaService: ConsultaService) {}
 
   ngOnInit() {
-    this.consultaSubscription = interval(60000) // Intervalo de 1 minuto
+    this.consultaSubscription = interval(60000)
       .subscribe(() => {
         this.fetchData();
       });
 
-    this.fetchData(); // Obtener datos al inicio
+    this.fetchData();
   }
 
   ngOnDestroy() {
@@ -65,13 +65,12 @@ export class ListaporfechaComponent {
   }
 
   countAlquileresPorDia() {
-    // Lógica para contar alquileres por día
-    // Ejemplo básico de conteo por día
+
     const countByDay = new Map<string, number>();
 
     this.filteredClientes.forEach(cliente => {
       const fechaAlquiler = new Date(cliente.fechaAlquiler);
-      const key = fechaAlquiler.toISOString().substr(0, 10); // Solo fecha sin hora
+      const key = fechaAlquiler.toISOString().substr(0, 10);
       if (countByDay.has(key)) {
         countByDay.set(key, countByDay.get(key)! + 1);
       } else {
@@ -83,13 +82,12 @@ export class ListaporfechaComponent {
   }
 
   countAlquileresPorMes() {
-    // Lógica para contar alquileres por mes
-    // Ejemplo básico de conteo por mes
+
     const countByMonth = new Map<string, number>();
 
     this.filteredClientes.forEach(cliente => {
       const fechaAlquiler = new Date(cliente.fechaAlquiler);
-      const key = fechaAlquiler.toISOString().substr(0, 7); // Solo año y mes
+      const key = fechaAlquiler.toISOString().substr(0, 7);
       if (countByMonth.has(key)) {
         countByMonth.set(key, countByMonth.get(key)! + 1);
       } else {
