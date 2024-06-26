@@ -18,4 +18,9 @@ export class InicioComponent  {
   seguntoPunto(){
     this.router.navigate(['/ListaxFecha'])
   }
+  tercerPunto(){
+    this.router.navigate(['/ListaxDiaMes'])
+  }
+
+
 }

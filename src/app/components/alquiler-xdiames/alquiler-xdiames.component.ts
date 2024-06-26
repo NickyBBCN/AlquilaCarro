@@ -1,14 +1,14 @@
-import { Component, inject } from '@angular/core';
-import { cliente } from '../../core/models/interfaceConsulta';
-import { ConsultaService } from '../../core/services/consulta.service';
+import { Component, OnInit, OnDestroy } from '@angular/core';
 import { Subscription, interval } from 'rxjs';
+import { ConsultaService } from '../../core/services/consulta.service';
+import { cliente } from '../../core/models/interfaceConsulta';
 
 @Component({
-  selector: 'app-listaporfecha',
-  templateUrl: './listaporfecha.component.html',
-  styleUrl: './listaporfecha.component.scss'
+  selector: 'app-alquiler-xdiames',
+  templateUrl: './alquiler-xdiames.component.html',
+  styleUrl: './alquiler-xdiames.component.scss'
 })
-export class ListaporfechaComponent {
+export class AlquilerXdiamesComponent {
   clientes: cliente[] = [];
   filteredClientes: cliente[] = [];
   fechaInicial: Date | null = null;
@@ -23,7 +23,7 @@ export class ListaporfechaComponent {
         this.fetchData();
       });
 
-    this.fetchData(); // Obtener datos al inicio
+    this.fetchData();
   }
 
   ngOnDestroy() {

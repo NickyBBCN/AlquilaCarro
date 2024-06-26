@@ -11,6 +11,9 @@ const routes: Routes = [
   {path:'ListaxFecha', loadChildren:()=>
     import('./components/listaporfecha/listaporfecha.module').then((m)=>m.ListaporfechaModule)
   },
+  {path:'ListaxDiaMes', loadChildren:()=>
+    import('./components/alquiler-xdiames/alquiler-xdiames.module').then((m)=>m.AlquilerXdiamesModule)
+  },
   {path:'**', redirectTo:'inicio',pathMatch:'full'}
 ];
 
