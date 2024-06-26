@@ -20,8 +20,7 @@ private consultaService = inject( ConsultaService)
       next: (response) => {
         console.log('response', response);
         if (response.body?.data) {
-          this.clientes = response.body.data.clientes; // Asigna los clientes obtenidos del servicio
-          console.log('clientes:', this.clientes);
+          this.clientes = response.body.data.clientes;
         }
       },
       error: (error) => {

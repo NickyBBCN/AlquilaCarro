@@ -1,6 +1,27 @@
-
-<div class="flex justify-content-center flex-wrap">
-  <div class="flex align-items-center justify-content-center w-4rem h-4rem bg-primary font-bold border-round m-2">1</div>
-  <div class="flex align-items-center justify-content-center w-4rem h-4rem bg-primary font-bold border-round m-2">2</div>
-  <div class="flex align-items-center justify-content-center w-4rem h-4rem bg-primary font-bold border-round m-2">3</div>
+<div class="overflow-hidden">
+  <div class="flex justify-content-center">
+    <p-button
+      class="flex-1 md:flex-none flex align-items-center justify-content-center m-2"
+      (onClick)="primerPunto()">
+      Ver tabla de alquiler
+    </p-button>
+    <p-button
+    class="flex-1 md:flex-none flex align-items-center justify-content-center m-2"
+    (onClick)="seguntoPunto()">
+    Filtrar por fecha de alquiler
+  </p-button>
+  </div>
 </div>
+<!-- <div>
+  <h3>Alquileres por día</h3>
+  <ul>
+    <li *ngFor="let alquiler of alquileresPorDia">{{ alquiler }}</li>
+  </ul>
+</div>
+
+<div>
+  <h3>Alquileres por mes</h3>
+  <ul>
+    <li *ngFor="let alquiler of alquileresPorMes">{{ alquiler }}</li>
+  </ul>
+</div> -->
