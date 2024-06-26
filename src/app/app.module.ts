@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import { InicioComponent } from './components/inicio/inicio.component';
 import { HttpClientModule } from '@angular/common/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { ListaporfechaComponent } from './components/listaporfecha/listaporfecha.component';
 
 @NgModule({
   declarations: [

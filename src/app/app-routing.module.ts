@@ -8,6 +8,9 @@ const routes: Routes = [
   {path:'ListaInicial', loadChildren:()=>
     import('./components/lista1.4/lista1.4.module').then((m)=>m.Lista14Module)
   },
+  {path:'ListaxFecha', loadChildren:()=>
+    import('./components/listaporfecha/listaporfecha.module').then((m)=>m.ListaporfechaModule)
+  },
   {path:'**', redirectTo:'inicio',pathMatch:'full'}
 ];
 
