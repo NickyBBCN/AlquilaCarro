@@ -21,8 +21,9 @@ export interface Inconsistencia {
 export interface cliente {
   cedula: string,
   nombre: string,
-  fechaAlquiler: string,
+  fechaAlquiler: Date,
   tiempoAlquilado: string,
+  saldo:string,
   placa: string,
   marca: string
 }

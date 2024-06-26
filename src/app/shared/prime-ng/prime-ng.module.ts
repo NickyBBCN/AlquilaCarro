@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { TableModule } from 'primeng/table';
+import { CalendarModule } from 'primeng/calendar';
 
 
 
@@ -8,7 +9,8 @@ import { TableModule } from 'primeng/table';
   declarations: [],
   exports: [
     CommonModule,
-    TableModule
+    TableModule,
+    CalendarModule,
   ]
 })
 export class PrimeNGModule { }

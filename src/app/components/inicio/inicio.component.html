@@ -1,24 +1,41 @@
-
 <div class="card">
-  <p-table [value]="clientes" [tableStyle]="{ 'min-width': '50rem' }">
-      <ng-template pTemplate="header">
-          <tr>
-              <th>Fecha</th>
-              <th>Identificacion</th>
-              <th>Nombre Completo</th>
-              <th>Apellido Completo</th>
+  <div class="flex align-items-center justify-content-center w-4rem h-4rem bg-primary font-bold border-round m-2">
 
-          </tr>
-      </ng-template>
-      <ng-template pTemplate="body" let-cliente>
-          <tr>
-              <td>{{ cliente.nombre }}</td>
-              <td>{{ cliente.identificacion }}</td>
-              <td>{{ cliente.nombreCompleto }}</td>
-              <td>{{ cliente.apellidoCompleto }}</td>
+<h1>Hola</h1>
+</div>
+  <div class="date-input-container">
+    <label for="fechaInicial">Fecha Inicial:</label>
+    <input type="date" id="fechaInicial" name="fechaInicial" [(ngModel)]="fechaInicial" (change)="filterByDateRange()" class="date-input">
+  </div>
 
-          </tr>
-      </ng-template>
+  <div class="date-input-container">
+    <label for="fechaFinal">Fecha Final:</label>
+    <input type="date" id="fechaFinal" name="fechaFinal" [(ngModel)]="fechaFinal" (change)="filterByDateRange()" class="date-input">
+  </div>
+
+
+  <p-table [value]="filteredClientes" [tableStyle]="{'min-width': '90%', 'border-radius': '5px', 'overflow': 'auto'}">
+    <ng-template pTemplate="header">
+      <tr>
+        <th>CEDULA</th>
+        <th>NOMBRE</th>
+        <th>FECHA ALQUILER</th>
+        <th>TIEMPO ALQUILADO</th>
+        <th>SALDO</th>
+        <th>PLACA</th>
+        <th>MARCA</th>
+      </tr>
+    </ng-template>
+    <ng-template pTemplate="body" let-cliente>
+      <tr>
+        <td>{{ cliente.cedula }}</td>
+        <td>{{ cliente.nombre }}</td>
+        <td>{{ cliente.fechaAlquiler }}</td>
+        <td class="text-right">{{ cliente.tiempoAlquilado }}</td>
+        <td>{{ cliente.saldo }}</td>
+        <td>{{ cliente.placa }}</td>
+        <td>{{ cliente.marca }}</td>
+      </tr>
+    </ng-template>
   </p-table>
 </div>
-<!-- <p-button label="Submit" (onClick)="nuevo()">Nuevo Registro</p-button>  -->
